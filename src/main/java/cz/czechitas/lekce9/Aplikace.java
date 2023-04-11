@@ -102,7 +102,7 @@ public class Aplikace extends JFrame {
         getRootPane().setDefaultButton(smazatButton);
 
         ulozitButton.addActionListener(this::handleUlozit);
-        smazatButton.addActionListener(System.out.printf("Mazu kontakt:");
+        smazatButton.addActionListener(this::handleSmazat);
     }
 
     private JPanel createGenderPanel() {
@@ -153,16 +153,15 @@ public class Aplikace extends JFrame {
         }
         System.out.printf("Pracovní kontakt: %s", pracovniCheckbox.isSelected() ? "ano" : "ne").println();
 
-
-      /*  private void handleSmazat (ActionEvent actionEvent) {
-            System.out.println("Mazu kontakt");
-        }*/
-
-
     }
 
-
-
-
+    private void handleSmazat(ActionEvent actionEvent) {
+        System.out.println("Mazu kontakt");
+    }
 
 }
+
+
+
+
+
